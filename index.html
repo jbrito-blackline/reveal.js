@@ -1,40 +1,85 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+	<title>PRESENTATION_TITLE_PLACEHOLDER</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/blood.css">
+	<link rel="stylesheet" href="dist/theme/blackline.css">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+<body>
+	<div class="blackline-watermark">
+		<img
+		src="images/logos/blackline-safety-logo-white-text.png"
+		/>
+	 </div>
+	<div class="reveal">
+		<div class="slides">
+			<section class="slide-title center" data-background-image="images/backgrounds/slide-background-title-01.jpg"
+				data-vertical-center="true">
+				<div class="text-block width-50">
+					<h1 class="title r-fit-text">TITLE_PLACEHOLDER</h1>
+					<div class="authors">AUTHORS_PLACEHOLDER<span style="color: brown"> | </span>DATE_PLACEHOLDER</div>
+				</div>
+			</section>
+
+			<section data-background-image="images/backgrounds/slide-background-content-01.jpg">
+				<h1>Example HTML slide</h1>
+				<ul class="overlay">
+					<li class="fragment">Bullet</li>
+					<li class="fragment">Bullet</li>
+					<ul>
+						<li class="fragment">Sub-bullet</li>
+						<li class="fragment">Sub-bullet</li>
+						<li class="fragment">Sub-bullet</li>
+					</ul>
+					<li class="fragment">bullet</li>
+				</ul>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+					# Example Markdown slide
+
+					* bullet   <!-- .element: class="fragment" -->
+						* sub-bullet   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+						* sub-bullet   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+					* bullet   <!-- .element: class="fragment" -->
+						* sub-bullet   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+							* another level of indentation   <!-- .element: class="fragment" -->
+					</textarea>
+			</section>
+
+			<section class="center" data-background-image="images/backgrounds/slide-background-content-01.jpg">
+				<h2>QA</h2>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			center: false,
+			overview: true,
+			transition: 'none', // none/fade/slide/convex/concave/zoom
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
 </html>
